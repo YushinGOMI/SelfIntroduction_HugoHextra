@@ -11,10 +11,10 @@ cascade:
 カーボンニュートラル社会の実現に向けて、エネルギー需要を削減する方法を探究しています。特に家庭部門のエネルギーに注目し、**人々の生活の質を保ちながら如何にエネルギーの消費量を抑えられるか**を、シミュレーションモデルを用いて研究しています。
 
 <!-- キーワードをタグで表示 -->
-<div class="hx:not-prose hx:mt-4 hx:flex hx:flex-wrap hx:gap-2">
-  <span class="hx:bg-blue-100 hx:text-blue-700 hx:px-3 hx:py-1  hx:rounded-full hx:text-sm"># 家庭部門エネルギー需要</span>
-  <span class="hx:bg-blue-100 hx:text-blue-700 hx:px-3 hx:py-1 hx:rounded-full hx:text-sm"># 建築シミュレーション</span>
-  <span class="hx:bg-blue-100 hx:text-blue-700 hx:px-3 hx:py-1 hx:rounded-full hx:text-sm"># Decent Living Standards</span>
+<div class="research-tags">
+  <span># 家庭部門エネルギー需要</span>
+  <span># 建築シミュレーション</span>
+  <span># Decent Living Standards</span>
 </div>
 
 {{< children-list >}}

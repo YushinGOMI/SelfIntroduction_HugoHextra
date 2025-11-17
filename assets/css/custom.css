@@ -1,3 +1,5 @@
+/* ===== 本文中のリンク装飾のカスタマイズ ===== */
+
 /* 本文中のリンクを通常の文字色＋下線なしにする */
 .content a {
   color: inherit;          /* 親要素と同じ色（＝本文の黒 or グレー） */
@@ -8,4 +10,62 @@
 .content a:hover {
   text-decoration: underline;  /* ホバー時だけ下線を出す → 完全に消したいなら none に */
   color: inherit;              /* 色は変えない */
+}
+
+/* ===== 研究ページのタグ（ライト／ダーク両対応） ===== */
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* バッジのベース（ライトモード） */
+.research-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;   /*  px-3 py-1 くらい */
+  border-radius: 9999px;      /* 丸いピル */
+  font-size: 0.875rem;        /* text-sm */
+  background-color: #83c3ee;  /* ドラクエのスライムぐらいの色 */
+  color: #011b2f;             /* 黒に近い青 */
+}
+
+/* ダークモード用の上書き */
+.research-tags span:is(html[class~="dark"] *) {
+  background-color: #931dd8;  /* ドラクエのりゅうおうぐらいの色 */
+  color: #fdf3ff;             /* 白に近い紫 */
+}
+
+/* ===== 研究ページなどで使うカード（children-list 用） ===== */
+
+/* ライトモードのカード */
+.children-list-card {
+  background-color: #ffffff;      /* 白 */
+  border-color: #e5e7eb;          /* gray-200 相当 */
+  color: inherit;
+}
+
+/* ダークモードのカード */
+.children-list-card:is(html[class~="dark"] *) {
+  background-color: #000000;      /* 黒 */
+  border-color: #374151;          /* gray-700 相当 */
+}
+
+/* ダーク時のホバーでほんのり浮かせる */
+.children-list-card:is(html[class~="dark"] *):hover {
+  background-color: #181818;      /* 少しだけ明るく */
+}
+
+/* ==== 左サイドバーの現在位置（ライトモード） ==== */
+.hextra-sidebar-active-item {
+  background-color: #83c3ee48 !important;  /* スライム色（薄） */
+  color: #011b2f !important;             /* 黒に近い青 */
+}
+
+/* ==== 左サイドバーの現在位置（ダークモード） ==== */
+html.dark .hextra-sidebar-active-item {
+  background-color: #931dd848 !important;  /* りゅうおう色（薄） */
+  color: #fdf3ff !important;             /* 白に近い紫 */
 }
