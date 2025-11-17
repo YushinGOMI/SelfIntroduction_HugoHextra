@@ -1,0 +1,24 @@
+{{- $p := .Page -}}
+{{- $pages := union $p.Sections $p.RegularPages -}}
+
+<div class="hx:not-prose hx:mt-4 hx:grid hx:gap-4 md:hx:grid-cols-2">
+  {{- range sort $pages "Weight" "asc" -}}
+    <a href="{{ .RelPermalink }}"
+       class="hx:block hx:rounded-xl hx:border hx:border-gray-200 dark:hx:border-neutral-800
+              hx:bg-white dark:hx:bg-neutral-900 hx:p-4
+              hover:hx:-translate-y-0.5 hover:hx:shadow-sm
+              hx:transition hx:duration-150">
+
+      <p class="hx:text-base hx:font-medium hx:mb-1">
+        {{ .Title }}
+      </p>
+
+      {{- with .Params.summary }}
+        <p class="hx:text-sm hx:text-gray-700 dark:hx:text-gray-300">
+          {{ . }}
+        </p>
+      {{- end }}
+
+    </a>
+  {{- end -}}
+</div>

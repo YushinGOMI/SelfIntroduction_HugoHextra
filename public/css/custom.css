@@ -1,0 +1,11 @@
+/* 本文中のリンクを通常の文字色＋下線なしにする */
+.content a {
+  color: inherit;          /* 親要素と同じ色（＝本文の黒 or グレー） */
+  text-decoration: none;   /* 下線を消す */
+}
+
+/* hover 時の挙動（必要に応じて調整） */
+.content a:hover {
+  text-decoration: underline;  /* ホバー時だけ下線を出す → 完全に消したいなら none に */
+  color: inherit;              /* 色は変えない */
+}
